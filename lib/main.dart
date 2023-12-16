@@ -614,3 +614,78 @@ class HomePage3 extends StatelessWidget {
     );
   }
 }
+
+class HomePage4 extends StatelessWidget {
+  const HomePage4({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.purple[200],
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          children: [
+            const SizedBox(height: 219),
+            const Text(
+              'Вход',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            const SizedBox(height: 25),
+            TextField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: const BorderSide(color: Colors.grey),
+                ),
+                filled: true,
+                fillColor: Colors.white,
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.blue),
+                ),
+                hintText: 'E-mail',
+              ),
+            ),
+            const SizedBox(height: 20),
+            TextField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: const BorderSide(color: Colors.grey),
+                ),
+                filled: true,
+                fillColor: Colors.white,
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.blue),
+                ),
+                hintText: 'Пароль',
+                suffixIcon: const Icon(Icons.visibility_off_outlined),
+              ),
+            ),
+            const SizedBox(height: 66),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Colors.purple[700],
+              ),
+              alignment: Alignment.center,
+              height: 50,
+              width: 132,
+              child: const Text(
+                'Войти',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
